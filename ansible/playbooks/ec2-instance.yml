@@ -1,0 +1,20 @@
+- name: Provision of a ec2 instance
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - ecr_setup
+
+- name: Configuration of Ec2_instance
+  hosts: lunched_ec2_instances
+  gather_facts: yes
+  roles:
+    - Common
+    - Docker
+    
+
+
+
+
+
+
+
