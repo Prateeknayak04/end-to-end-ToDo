@@ -36,6 +36,7 @@
     password: "{{ ecr_token.stdout }}"
     reauthorize: yes
   register: docker_login_result
+  become: yes
 
 - name: Debug ECR Token
   debug: 
@@ -73,7 +74,7 @@
     state: started
     restart_policy: always
     ports: 
-      - "3002:3002"
+      - "5000:5000"
     volumes:
       - /var/log/todo-app:/var/log/todo-app
     env_file: /opt/todo-app/.env
