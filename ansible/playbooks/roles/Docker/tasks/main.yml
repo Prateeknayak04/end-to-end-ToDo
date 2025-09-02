@@ -47,6 +47,7 @@
     name: "{{ backend_ecr_uri }}:latest"
     source: pull
     force_source: yes
+  become: yes
 
 - name: Get SSM Parameter
   shell: |
