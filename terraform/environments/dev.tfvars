@@ -11,7 +11,7 @@ cloudfront_config = {
 instance_config ={
     vpc_id = "vpc-04550d2e519f89bca"
     instance_type = "t2.micro"
-    subnet_ids = ["subnet-05c3cd17040b0d263","subnet-0e2eb8bc2bd349542"]
+    subnet_ids = ["subnet-0e2eb8bc2bd349542","subnet-0accf8b53aa204cb5"]
     instance_count = 2
     ami_id = "ami-0d03cb826412c6b0f"
     ssh_key_name = "test-demo"
@@ -19,6 +19,6 @@ instance_config ={
 }
 
 alb_config = {
-    public_subnet_ids = ["subnet-05c3cd17040b0d263","subnet-0e2eb8bc2bd349542"]
+    public_subnet_ids = ["subnet-0e2eb8bc2bd349542","subnet-0accf8b53aa204cb5"]
     certificate_arn = "arn:aws:acm:ap-south-1:149536480317:certificate/3e27aa59-3329-4682-ac9c-c0b2879e0716"
 }
