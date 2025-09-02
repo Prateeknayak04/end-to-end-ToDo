@@ -38,6 +38,7 @@
       - "--exclude=website/__pycache__"
       - "--exclude=uv.lock"
       - "--exclude=.dockerignore"
+      - "--chmod=0600"
 
 
 # - name: Set secret key Variable
