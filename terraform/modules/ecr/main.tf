@@ -6,6 +6,12 @@ resource "aws_ecr_repository" "backend" {
     }
 }
 
+# resource "aws_ecr_repository" "name" {
+#     name = "${var.environment}-todo-backend"
+#     force_delete = true
+  
+# }
+
 resource "aws_ecr_lifecycle_policy" "ecr_policy" {
     repository = aws_ecr_repository.backend.name
     policy = jsonencode({

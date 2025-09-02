@@ -28,7 +28,7 @@ resource "aws_iam_role_policy" "ecr_access" {
             {
                 Effect = "Allow"
                 Action = [
-                    "ecr:GetAutherizationToken",
+                    "ecr:GetAuthorizationToken",
                     "ecr:GetDownloadUrlForLayer",
                     "ecr:BatchCheckLayerAvailability",
                     "ecr:BatchGetImage",
