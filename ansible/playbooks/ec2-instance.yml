@@ -1,4 +1,4 @@
-- name: Provision of a ec2 instance
+- name: Provision of a ec2 instance using Ansible
   hosts: localhost
   gather_facts: false
   roles:
