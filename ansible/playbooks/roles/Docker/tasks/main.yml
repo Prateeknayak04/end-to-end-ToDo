@@ -70,6 +70,7 @@
   become: yes
 
 - name: Start the backend container
+  become: yes
   docker_container:
     name: backend
     image: "{{ backend_ecr_uri }}:latest"
