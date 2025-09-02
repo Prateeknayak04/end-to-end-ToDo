@@ -67,6 +67,7 @@
       PORT=5000
     dest: /opt/todo-app/.env
     mode: "0600"
+  become: yes
 
 - name: Start the backend container
   docker_container:
