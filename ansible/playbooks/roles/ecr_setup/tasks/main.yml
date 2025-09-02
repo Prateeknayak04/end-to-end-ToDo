@@ -1,7 +1,7 @@
 ---
 # tasks file for ecr_setup
 
-- name: Get ECR login token
+- name: Get the ECR login token
   shell: "aws ecr get-login-password --region {{ aws_region }}"
   register: ecr_token
 
