@@ -57,7 +57,7 @@ resource "aws_iam_role_policy" "ssm_access" {
                     "ssm:GetParametersByPath"
                 ]
                 Resource = [
-                    "arn:aws:ssm:${var.aws_region}:${var.aws_account_id}:parameter/${var.environment}/todo-app/*"
+                    "arn:aws:ssm:${var.aws_region}:${var.aws_account_id}:parameter/${var.environment}/backend/*"
                 ]
             }
         ]
