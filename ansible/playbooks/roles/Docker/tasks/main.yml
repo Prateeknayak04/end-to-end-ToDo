@@ -60,7 +60,7 @@
   register: SECRET_URI
 
 
-- name: Create .env file from SSM paramenters
+- name: Create .env file from SSM parameters
   copy: 
     content: |
       secret={{ SECRET_URI.stdout }}
