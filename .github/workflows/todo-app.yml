@@ -76,7 +76,6 @@ jobs:
   
    - name: Deploy Frontend
      run: |
-      cd end-to-end-ToDo
       aws s3 sync website/statics s3://prateek-todo-test
       aws s3 sync website/templates s3://prateek-todo-test
       
