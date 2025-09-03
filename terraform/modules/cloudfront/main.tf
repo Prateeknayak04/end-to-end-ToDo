@@ -2,7 +2,7 @@ resource "aws_cloudfront_distribution" "website" {
     enabled = true
     is_ipv6_enabled = true
     default_root_object = "index.html"
-    aliases =  []
+    aliases =  [var.cloudfront_config.custom_domain]
     price_class = var.cloudfront_config.price_class
     origin {
         domain_name = var.cloudfront_config.regional_bucket_domain_name
