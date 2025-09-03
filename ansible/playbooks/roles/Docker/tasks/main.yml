@@ -42,7 +42,7 @@
   debug: 
     var: docker_login_result
 
-- name: Pull latest Backend image
+- name: Pull latest Backend image from ecr
   docker_image:
     name: "{{ backend_ecr_uri }}:latest"
     source: pull
