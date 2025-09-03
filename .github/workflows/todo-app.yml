@@ -74,9 +74,9 @@ jobs:
       Cf_DISTRIBUTION_NAME=$(grep "frontend_bucket_name=" ansible/inventory | cut -d"=" -f2)
       echo "cloudfront_distribution_id=$Cf_DISTRIBUTION_NAME" >> $GITHUB_OUTPUT
   
-   - name: Deploy Frontend to s3 bucket
+   - name: Deploy Frontend
      run: |
-      end-to-end-ToDo
+      cd end-to-end-ToDo
       aws s3 sync website/statics s3://prateek-todo-test
       aws s3 sync website/templates s3://prateek-todo-test
       
