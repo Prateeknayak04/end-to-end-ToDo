@@ -1,7 +1,7 @@
 ---
 # tasks file for Common
 
-- name: Install the common Packages
+- name: Install common Packages
   become: yes
   package:
     name: "{{ item.pk_name}}"
