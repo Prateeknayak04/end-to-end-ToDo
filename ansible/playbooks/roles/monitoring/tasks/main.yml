@@ -19,12 +19,14 @@
     url: "https://github.com/docker/compose/releases/download/v2.39.2/docker-compose-linux-x86_64"
     dest: /usr/local/bin/docker-compose
     mode: "0755"
+  become: yes
 
 - name: create Sym link for docker-compose
   file:
     src: /usr/local/bin/docker-compose
     dest: /usr/bin/docker-compose
     state: link
+  become: yes  
 
 - name: Start and enable docker service
   service:
