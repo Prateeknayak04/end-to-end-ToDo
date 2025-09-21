@@ -69,6 +69,7 @@
   shell: |
     cd {{ monitoring_dir }}
     docker-compose up -d --build
+  become: yes
   
 
 - name: Wait for service to be up
