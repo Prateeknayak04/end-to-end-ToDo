@@ -87,6 +87,7 @@
   args: 
     chdir: "{{ monitoring_dir }}"
   register: service_status
+  become: yes
 
 - name: Debug service service_status
   debug:
@@ -102,6 +103,7 @@
   delay: 1
 
 - name: configure prometheus data source.
+  become: yes
   uri:
     url: "http://localhost:3000/api/datasources"
     method: POST
