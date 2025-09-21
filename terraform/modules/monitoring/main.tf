@@ -36,6 +36,13 @@ resource "aws_security_group" "monitoring-sg" {
         protocol = "tcp"
         cidr_blocks = ["0.0.0.0/0"]
     }
+    
+    ingress {
+        from_port = 5000 #Flask App
+        to_port = 5000
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
 
     ingress {
         from_port = 22  #SSH
