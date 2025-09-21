@@ -53,7 +53,7 @@
     dest: /opt/monitoring/docker-compose.yml
   become: yes
 
-- name: Copy Prometheus config
+- name: Copy Prometheus configuration 
   template:
     src: prometheus.yml.j2
     dest: /opt/monitoring/prometheus/prometheus.yml
