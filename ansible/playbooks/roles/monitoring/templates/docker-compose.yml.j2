@@ -14,6 +14,8 @@ services:
       - "--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)"
     ports:
       - "9100:9100"
+    networks:
+      - monitoring
     restart: unless-stopped
 
   prometheus:
@@ -30,6 +32,8 @@ services:
       - "--web.enable-lifecycle"
     ports:
       - "9090:9090"
+    networks:
+      - monitoring
     restart: unless-stopped
 
   grafana:
@@ -47,6 +51,10 @@ services:
     depends_on:
       - prometheus
     restart: unless-stopped
+
+networks:
+  monitoring:
+    driver: bridge
 
 volumes:
   prometheus_data:
