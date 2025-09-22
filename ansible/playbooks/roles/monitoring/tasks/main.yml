@@ -81,7 +81,7 @@
     - 9090 # Prometheus
     - 3000 # Grafana
     - 9100 # Node Exporter
-    - 5000 # Flask App
+    # - 5000 # Flask App
 
 - name: Show Service status
   shell: docker-compose ps
