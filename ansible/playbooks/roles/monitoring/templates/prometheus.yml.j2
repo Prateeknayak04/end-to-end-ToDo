@@ -13,7 +13,7 @@ scrape_configs:
           port: 9100
           filters:
             - name: "tag:Name"
-              values: ["{{ backend_ec2_tag_name}}"]
+              values: ["{{ backend_ec2_tag_name }}"]
             - name: "instance-state-name"
               values: ["running"]
 
@@ -23,6 +23,6 @@ scrape_configs:
           port: 5000
           filters:
           - name: "tag:Name"
-            values: ["{{ backend_ec2_tag_name}}"]
+            values: ["{{ backend_ec2_tag_name }}"]
           - name: "instance-state-name"
             values: ["running"]
