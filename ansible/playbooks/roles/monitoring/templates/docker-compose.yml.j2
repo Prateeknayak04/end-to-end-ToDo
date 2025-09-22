@@ -48,12 +48,6 @@ services:
       - prometheus
     restart: unless-stopped
 
-  backend:
-    build: ./flask-app 
-    ports:
-      - "5000:5000"
-    restart: unless-stopped
-
 volumes:
   prometheus_data:
   grafana_data:
