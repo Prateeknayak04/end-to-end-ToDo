@@ -13,7 +13,7 @@ scrape_configs:
           port: 9100
           filters:
             - name: "tag:Name"
-              values: ["{{ backend_ec2_tag_name }}"]
+              values: ["{{ backend_ec2_tag_name }}","dev-monitoring"]
             - name: "instance-state-name"
               values: ["running"]
 
