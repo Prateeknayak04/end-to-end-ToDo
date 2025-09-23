@@ -47,7 +47,7 @@
     - "{{ monitoring_dir }}/grafana"
   become: yes
 
-- name: Copy docker-compose file
+- name: Copy docker-compose file from template
   template:
     src: docker-compose.yml.j2
     dest: /opt/monitoring/docker-compose.yml
