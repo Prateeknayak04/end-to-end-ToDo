@@ -102,7 +102,7 @@
   retries: 60
   delay: 1
 
-- name: configure prometheus data source.
+- name: configure prometheus data source in grafana
   become: yes
   uri:
     url: "http://localhost:3000/api/datasources"
