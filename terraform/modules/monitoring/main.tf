@@ -45,7 +45,7 @@ resource "aws_security_group" "monitoring-sg" {
     }
 
     ingress {
-        from_port = 9100 #Flask App
+        from_port = 9100 #
         to_port = 9100
         protocol = "tcp"
         cidr_blocks = ["0.0.0.0/0"]

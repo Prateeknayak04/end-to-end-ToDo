@@ -47,6 +47,7 @@ resource "aws_security_group" "backend" {
         protocol = "tcp"
         security_groups = [var.instance_config.alb_security_group_id]
     }
+    
     ingress {
         from_port = 9100
         to_port = 9100
